@@ -66,7 +66,7 @@ export class Messanger extends Component {
     if (this.messages.length) {
       const lastMessage = this.messages[this.messages.length - 1];
 
-      if (lastMessage.author != 'Bot') {
+      if (lastMessage.author !== 'Bot') {
         this.handlMessageSend({ text: `Привет ${lastMessage.author}`, author: 'Bot' });        
       }
 
