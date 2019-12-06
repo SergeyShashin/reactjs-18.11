@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "dev": "webpack-dev-server --mode development --port 1234"
+    "dev": "webpack-dev-server --mode development --port 8080"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +34,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
