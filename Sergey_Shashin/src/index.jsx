@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
+import { MessageField } from 'components/MessageField';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      text: [],
-    }
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-
-    this.setState({
-      text: this.state.text.concat('Нормально')
-    });
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}>Отправить</button>
-        {this.state.text.map(e => (<div>{e}</div>))}
+        <MessageField />
       </div>
     )
   }
 
 }
-
 
 ReactDom.render(
   <App />,
