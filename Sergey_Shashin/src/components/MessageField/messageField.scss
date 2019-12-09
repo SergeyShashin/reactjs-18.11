@@ -1,5 +1,4 @@
-.messageField {
-  padding: 10px;
+.field {
   height: 500px;
   width: 100%;
   background: lightseagreen;
@@ -7,9 +6,14 @@
 
 .author {
   color: darkslateblue;
+  font-size: 20px;
 }
 
 .robot{
   color: aqua;
   text-align: right;
+}
+
+.inputText{
+  width: 40%;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
-import { MessageField } from 'components/MessageField';
+import { Layout } from './components/Layout';
 
 
 class App extends Component {
@@ -11,9 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <MessageField />
-      </div>
+      <Layout />
     )
   }
 

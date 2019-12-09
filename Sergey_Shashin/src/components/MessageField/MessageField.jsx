@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Message } from 'components/Message';
-import messageField from './messageField.scss';
+import './messageField.scss';
+import {Button} from '@material-ui/core';
+import {Input} from '@material-ui/core';
 
 export class MessageField extends Component {
   constructor(props) {
@@ -11,14 +13,21 @@ export class MessageField extends Component {
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   handleClick() {
     this.setState({
-      messages: this.state.messages.concat({ message: this.state.text, author: 'admin' }),
+      messages: this.state.messages.concat({ message: this.state.text, author: 'user' }),
       text: ''
     });
+  }
 
+  handleKeyDown(e){
+    if(event.ctrlKey && event.keyCode === 13) {
+      this.handleClick();
+    };    
+  
   }
 
   handleChange(e) {
@@ -40,8 +49,8 @@ export class MessageField extends Component {
   render() {
 
     return (
-      <div>
-        <div className='messageField'>
+      <div className='messageField'>
+        <div className='field'>
           {
             this.state.messages.map((e, idx) => (
               e.author !== 'robot'
@@ -51,8 +60,8 @@ export class MessageField extends Component {
           }
         </div>
         <div className="message">
-          <input value={this.state.text} onChange={this.handleChange} />
-          <button onClick={this.handleClick}>Отправить</button>
+          <Input className = "inputText" value={this.state.text} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
+          <Button onClick={this.handleClick}>Отправить</Button>
         </div>
       </div>
     )
