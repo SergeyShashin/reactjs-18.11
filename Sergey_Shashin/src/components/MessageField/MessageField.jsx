@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Message } from 'components/Message';
-import './messageField.scss';
 import {Button} from '@material-ui/core';
 import {Input} from '@material-ui/core';
 
@@ -13,14 +12,15 @@ export class MessageField extends Component {
     }
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);    
+    
   }
 
   handleClick() {
     this.setState({
       messages: this.state.messages.concat({ message: this.state.text, author: 'user' }),
       text: ''
-    });
+    });    
   }
 
   handleKeyDown(e){

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDom from 'react-dom';
 import { Layout } from './components/Layout';
+import { BrowserRouter } from 'react-router-dom';
 
 
 class App extends Component {
@@ -18,6 +19,8 @@ class App extends Component {
 }
 
 ReactDom.render(
-  <App />,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root'),
 );

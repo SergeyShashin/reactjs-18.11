@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode development",
-    "dev": "webpack-dev-server --mode development --port 8080"
+    "dev": "webpack-dev-server --mode development --port 1234"
   },
   "keywords": [],
   "author": "",

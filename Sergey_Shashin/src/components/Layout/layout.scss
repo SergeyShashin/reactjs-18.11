@@ -1,18 +1,46 @@
 .header {
   width: 100%;
-  background: rgb(118, 106, 197);
-  margin: 0;
-  padding: 0;
+  background: lightsteelblue;
 }
-.chatList-messageField{
+
+.chatList-messageField {
   display: flex;
-  background: aquamarine;
+
+  .messageField {
+    width: 70%;
+  }
+
+  .field {
+    height: 500px;
+    background: lightseagreen;
+    padding: 10px;
+    color: darkslateblue;
+  }
+
+  .author {    
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 30px;
+    background: cornflowerblue;
+    max-width: 30%;
+    text-align: center;
+  }
+
+  .robot {    
+    margin: 5px 5px 5px 60%;
+    background: lightskyblue;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 5px;
+    max-width: 30%;
+    text-align: center;
+  }
+
+  .inputText {
+    width: 40%;
+  }
 }
 
 .chatList {
   width: 30%;
-}
-
-.messageField {
-  width: 70%;
 }
