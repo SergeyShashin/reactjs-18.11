@@ -1,0 +1,18 @@
+.chatsField {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 30%;
+  max-height: 600px;
+  color: #006394;
+  font-weight: bold;
+
+  button {
+    background: none;
+    border: none;
+    color: #006394;
+  }
+
+  button:hover {    
+    font-weight: bold;
+  }
+}

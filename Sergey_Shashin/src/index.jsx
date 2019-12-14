@@ -1,26 +1,11 @@
-import React, { Component } from 'react';
+import './index.scss';
+import React from 'react';
 import ReactDom from 'react-dom';
-import { Layout } from './components/Layout';
-import { BrowserRouter } from 'react-router-dom';
+import { App } from 'components/App';
 
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-  }
-
-  render() {
-    return (
-      <Layout />
-    )
-  }
-
-}
 
 ReactDom.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <App />,
   document.getElementById('root'),
 );
