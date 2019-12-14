@@ -7,7 +7,6 @@ export class MessagesField extends Component {
   constructor(props) {
     super(props)
   }
-
   render() {
     return (
       <div className="messagesField">

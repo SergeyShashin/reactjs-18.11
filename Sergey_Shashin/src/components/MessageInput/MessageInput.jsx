@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 export class MessageInput extends Component {
   constructor(props) {
     super(props)
+    
   }
 
   render() {

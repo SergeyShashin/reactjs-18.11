@@ -1,21 +1,24 @@
-.messageInput{
-  margin-top: 10px; 
-  input{
+.messageInput {
+  margin-top: 10px;
+
+  input {
     background: none;
     border: none;
     border-bottom: 1px solid #006394;
-    color: #006394;   
+    color: #006394;
   }
-  .text{
-    width:400px;
+
+  .text {
+    width: 400px;
   }
-  button{
+
+  button {
     background: none;
     border: none;
     color: #006394;
   }
-  button:hover{    
+
+  button:hover {
     font-weight: bold;
   }
 }
-

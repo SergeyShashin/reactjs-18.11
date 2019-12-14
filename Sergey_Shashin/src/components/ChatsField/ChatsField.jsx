@@ -7,10 +7,11 @@ export class ChatsField extends Component {
   }
 
   render() {
+
     return (
       <div className="chatsField">
         <p><span>IconChat </span> <span> NameChat</span> </p>
-        <button>Добавить чат</button>        
+        <button>Добавить чат</button>
       </div>
     )
   }
