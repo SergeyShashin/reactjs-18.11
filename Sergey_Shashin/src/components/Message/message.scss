@@ -1,8 +1,10 @@
 .message {
+  margin-bottom: 10px;
   padding: 10px;
   text-align: center;
-  width: 100px;
+  max-width: 40%;
   border-radius: 30px;
   color: #006394;
   background: white;
+  overflow-wrap: anywhere;
 }

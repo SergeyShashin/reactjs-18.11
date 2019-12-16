@@ -1,8 +1,9 @@
 .messagesField {
+  display: flex;
+  flex-direction: column;
   width: 70%;
-
-  .field {
-    height: 600px;
-    background: #006394;
-  }
+  padding: 1%;
+  background: #006394;
+  height: 590px;
+  overflow-y: scroll;
 }
