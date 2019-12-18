@@ -13,6 +13,7 @@ export class MessageInput extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSend = this.handleSend.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
   static propTypes = {
@@ -34,7 +35,12 @@ export class MessageInput extends Component {
       onSend(this.state);
       this.setState({ text: '', });
     }
+  }
 
+  handleKeyDown(e) {
+    if (e.keyCode === 13) {
+      this.handleSend();
+    }
   }
 
   render() {
@@ -42,7 +48,7 @@ export class MessageInput extends Component {
     return (
       <div className="messageInput">
         <input className="author" type="text" name="author" placeholder="Автор" value={author} onChange={this.handleInputChange} />
-        <input className="text" type="text" name="text" placeholder="Текст" value={text} onChange={this.handleInputChange} />
+        <input className="text" type="text" name="text" placeholder="Текст" value={text} onChange={this.handleInputChange} onKeyDown={this.handleKeyDown} />
         <button onClick={this.handleSend}>Отправить</button>
       </div>
     )
