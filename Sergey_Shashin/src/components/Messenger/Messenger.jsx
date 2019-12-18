@@ -16,23 +16,34 @@ export class Messenger extends Component {
           }
         ],
 
+      chats: [{       
+        nameChat: 'Реакт',
+      }]
+
     }
     this.handleSend = this.handleSend.bind(this);
   }
 
-  handleSend(m) {    
+  handleSend(m) {
     this.setState({
       messages: this.state.messages.concat([{ author: m.author, text: m.text }])
     })
-
   }
+
+  handleAddChat=(ch)=>{
+    this.setState({
+      chats: this.state.chats.concat([{ nameChat: ch.nameChat }])
+    })
+  }
+
+
 
   render() {
 
     return (
       <div className="messenger">
         <div className="chatsField-messagesField">
-          <ChatsField />
+          <ChatsField chats={this.state.chats} handleChat={this.handleAddChat}/>
           <MessagesField messages={this.state.messages} />
         </div>
         <MessageInput onSend={this.handleSend} />
